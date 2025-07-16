@@ -2,6 +2,9 @@
 
 <p align="center">
 Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB.
+
+Feito pelo aluno Pedro R Silva, ainda não entendo bem o que colocar no README, mas estudando
+
 </p>
 
 <p align="center">

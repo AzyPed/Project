@@ -50,13 +50,14 @@ body img {
 }
 
 #container {
-  width: 360px; /*
+  width: 100%; /*
   border: 1px solid red; 
   Borda ira se adaptar com a imagem, então não precisa de altura
   margin-right: auto;
   margin-left: auto; 
   Automatico sendo aplicado a todos os lados pelo margin
   Tem como especificar*/
+  max-width: 580px;
   margin: 56px auto 0px auto;
   /*Como num relogio ^ cima direita baixo esquerda*/
   padding: 0 24px;
