@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  /*Reset dos padrões de margem do sistema*/
+  box-sizing: border-box;
+  /*Passar o mouse por cima do box sizing explica o que ele faz, não sei explicar*/
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./Assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --button: url(./Assets/MoonStars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(Assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --button: url(./Assets/Sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./Assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  Top center focado no eixo y e x sendo o centro dos dois  /*
+  background-size: cover;
+  */
+
+  background: var(--bg-url) no-repeat top center/cover;
+  /*background: color image repeat position/size ^ */
+}
+
+body * {
+  /* *- é para universal*/
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+body img {
+  border-radius: 50%;
+}
+
+#container {
+  width: 360px; /*
+  border: 1px solid red; 
+  Borda ira se adaptar com a imagem, então não precisa de altura
+  margin-right: auto;
+  margin-left: auto; 
+  Automatico sendo aplicado a todos os lados pelo margin
+  Tem como especificar*/
+  margin: 56px auto 0px auto;
+  /*Como num relogio ^ cima direita baixo esquerda*/
+  padding: 0 24px;
+
+  display: block;
+  /*Display define se aparecerá ou forma, In-line ao lado em linha, block é abaixo
+  Alguns codigos são automaticos o modo, seja block ou in line*/
+}
+
+#profile {
+  text-align: center;
+  /*A imagem não pode ser centralizada com margin por ser in-line, mas o elemento pai pode definir in-line*/
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  /* geralmente não precisa de altura no css, por conta que ele preenche com o conteudo da  pagina 
+  e block sem largura definida preenche tudo*/
+  margin: auto;
+  /*Não funciona em display in-line, somente block*/
+}
+
+#profile p {
+  font-weight: 500;
+  /*font-size: 16px;
+  Esse já é o tamanho padrão da fonte em computadores */
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--button) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  /*^ alinhando position absolute*/
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* Links - Lista */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  /*Eixo x^*/
+  align-items: center;
+  /*Eixo y^*/
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-weight: bold;
+  /*acima de 400 já é Bold*/
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  /*sudo selector^ vulgo, quando passar o mouse em cima*/
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/*Social links*/
+#social_links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social_links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+#social_links a:hover {
+  background-color: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
