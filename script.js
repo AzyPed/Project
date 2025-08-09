@@ -12,11 +12,11 @@ function toggleMode() {
   //pegar a tag IMG
   const img = document.querySelector("#profile img")
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./Assets/AvatarVDia.jpg.jfif")
+    img.setAttribute("src", "./Assets/AvatarVDia.jpeg")
     img.setAttribute("alt", "Placeholder")
   } else {
     //substituir imagem
-    img.setAttribute("src", "./Assets/AvatarAzyN.jpg")
+    img.setAttribute("src", "./Assets/AvatarAzyN.jpeg")
     img.setAttribute("alt", "Minha foto noturna")
   }
 }
